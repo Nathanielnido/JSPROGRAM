@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program 1</title>
+	<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+	<h1>Program 1: Adding of Two(2) Numbers</h1>
+	<div>
+	<label for ="Num1">Enter First: </label><br>
+	<input type="number" id="num1" /><br/>
+	<label for ="Num1">Enter Second: </label><br>
+	<input type="number" id="num2" /><br/>
+	</div>
+	<div>
+	<button onclick="addTwoNum()">COMPUTE</button><br>
+	<button onclick="ClearFields()">CLEAR</button>
+	<p id="result">The Sum is: </p>
+	</div>
+	<button><a href="index.html"> Back To Choices.</a></button>
+<script>
+	function addTwoNum()
+	{
+		var a = parseFloat(document.getElementById("num1").value);
+		var b = parseFloat(document.getElementById("num2").value);
+		var result = a + b;
+		document.getElementById("result").innerHTML="The Sum is: "+"<u>"+result+"</u>";
+	}
+	function ClearFields()
+	{
+		document.getElementById("num1").value = "";
+		document.getElementById("num2").value = "";
+		document.getElementById("result").innerHTML = "0";
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program 7</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h1>Program 7: Computing Two(2) Numbers</h1>
+    <div>
+        <label for="num1">Enter 1st Number: </label><br>
+        <input type="number" id="num1"><br>
+        <label for="num2">Enter 2nd Number: </label><br>
+        <input type="number" id="num2"><br>
+    </div>
+    <div>
+        <button onclick="calculate()">Calculate</button>
+    </div>
+        <p id="answer"></p>
+        <button><a href="index.html">Back To Choices.</a></button>
+
+    <script>
+        function calculate()
+        {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+
+            diff = num1 - num2;
+            sum = num1 + num2;
+            prod = num1 * num2;
+
+            if (num1 == num2){
+                document.getElementById("answer").innerHTML = diff;
+            }
+            else if(num1 > num2){
+                document.getElementById("answer").innerHTML = sum;
+            }
+            else {
+                document.getElementById("answer").innerHTML = prod;
+            }
+        }
+    </script>
+</body>
+</html>

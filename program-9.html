@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program 9</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h1>Program 9: Computing Your Grades</h1>
+    <div>
+        <label for="Correct">Enter Number of Correct: </label><br>
+        <input type="number" id="check"><br>
+        <label for="Items">Enter Number of Items: </label><br>
+        <input type="number" id="item"><br>
+    </div>
+    <div>
+        <button onclick="grade()">Get Your Grade</button>
+    </div>
+        <p id="egrade"></p>
+        <p id="remark"></p>
+        <button><a href="index.html">Back To Choices.</a></button>
+
+    <script>
+        function grade(){
+            var correct = parseInt(document.getElementById("check").value);
+            var item = parseInt(document.getElementById("item").value);
+            egrade = (correct / item) *60 + 40;
+            total = egrade;
+
+            if (item < correct){
+                alert("Pag Mali Wag Mo Ng Ipilit");
+                return;
+            }
+
+
+            if (egrade >= 75 && egrade <= 80){
+                document.getElementById("egrade").innerHTML=total;
+                document.getElementById("remark").innerHTML="Not Bad";
+            }   
+            else if (egrade >= 81 && egrade <= 85){
+                document.getElementById("egrade").innerHTML=total;
+                document.getElementById("remark").innerHTML="Good";
+            }
+            else if(egrade >= 86 && egrade <= 90){
+                document.getElementById("egrade").innerHTML=total;
+                document.getElementById("remark").innerHTML="Very Good";
+            }
+            else if (egrade >= 91 && egrade <= 95){
+                document.getElementById("egrade").innerHTML=total;
+                document.getElementById("remark").innerHTML="May Future Ka";
+            }
+            else if (egrade >= 96 && egrade <= 100){
+                document.getElementById("egrade").innerHTML=total;
+                document.getElementById("remark").innerHTML="Pwede na mag asawa";
+            }
+            else {
+                document.getElementById("egrade").innerHTML=total;
+                document.getElementById("remark").innerHTML="Sorry, Kulang ka pa sa effort";
+            }
+        }
+    </script>
+</body>
+</html> 

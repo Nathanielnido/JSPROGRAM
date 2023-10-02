@@ -1,0 +1,45 @@
+<!DOCTYPE Html>
+<Html>
+<head>
+	<title>Program 3</title>
+	<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+	<H1>Program 3: Comparing The Numbers</H1>
+	<div>
+		<label for="Num1">Enter 1st Number: </label><br>
+		<input type="number" id="num1"/><br>
+		<label for="Num2">Enter 2nd Number: </label><br>
+		<input type="number" id="num2"/><br>
+	</div>
+	<div>
+		<button onclick="compare()">COMPARE</button>
+	</div>
+		<p id="comparing"></p>
+	<button><a href="index.html"> Back To Choices.</a></button>
+	
+	<script>
+		function compare()
+		{
+			var num1 = parseFloat(document.getElementById("num1").value);
+			var num2 = parseFloat(document.getElementById("num2").value);
+			
+			if (num1 > num2)
+			{
+				document.getElementById("comparing").innerHTML= "1st Number > 2nd Number" ;
+			}
+			else if (num1 < num2)
+			{
+				document.getElementById("comparing").innerHTML="1st Number < 2nd Number";
+			}
+			else
+			{
+				document.getElementById("comparing").innerHTML="1st Number = 2nd Number";
+			}
+		
+		}
+	
+	</script>
+
+</body>
+</Html>

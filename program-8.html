@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program 8</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h1>Program 8: Determining The Number if ODD or EVEN</h1>
+
+    <div>
+        <label for="number">Enter a Number</label><br>
+        <input type="number" id="Number"><br>
+    </div>
+    <div>
+        <button onclick="OddEven()">Determine</button>
+    </div>
+        <p id="Determine"></p>
+        <button><a href="index.html">Back To Choices.</a></button>
+
+    <script>
+        function OddEven(){
+            var number = parseFloat(document.getElementById("Number").value)
+
+            if (number % 2 == 0){
+                document.getElementById("Determine").innerHTML ="<u>"+number+"</u>"+" is: <b>EVEN</b> Number";
+            }
+            else {
+                document.getElementById("Determine").innerHTML ="<u>"+number+"</u>"+" is: <b>ODD</b> Number";
+            }
+        }
+    </script>
+</body>
+</html>

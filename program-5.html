@@ -1,0 +1,54 @@
+<!DOCTYPE Html>
+<Html>
+<head>
+	<title>Program 5</title>
+	<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+	<h1>Program 5: Computing Numbers</h1>
+	<div>
+		<label for="NUM1">Enter 1st Number: </label><br>
+		<input type="number" id="Num1"><br>
+		<label for="NUM2">Enter 2nd Number: </label><br>
+		<input type="number" id="Num2"><br>
+		<label for="NUM3">Enter 3rd Number: </label><br>
+		<input type="number" id="Num3"><br>
+		<label for="NUM4">Enter 4th Number:  </label><br>
+		<input type="number" id="Num4"><br>	
+		<label for="NUM5">Enter 5th Number:  </label><br>
+		<input type="number" id="Num5"><br>
+	</div>
+	<div>
+		<button onclick="ComputingNumbers()">Compute</button>
+	</div>
+		<p id="Answer">Answer</p>
+		<button><a href="index.html">Back To Choices</a></button>
+
+	<script>
+		function ComputingNumbers()
+		{
+			var n1 = parseFloat(document.getElementById("Num1").value);
+			var n2 = parseFloat(document.getElementById("Num2").value);
+			var n3 = parseFloat(document.getElementById("Num3").value);
+			var n4 = parseFloat(document.getElementById("Num4").value);
+			var n5 = parseFloat(document.getElementById("Num5").value);
+			
+			var first = n1*n2*n3*n4*n5;
+			var second = n4*n5;
+			
+			if (n3 > n1)
+			{
+				document.getElementById("Answer").innerHTML=first;
+			}
+			else if (n1 > n2)
+			{
+				document.getElementById("Answer").innerHTML=second;
+			}
+			else
+			{
+				document.getElementById("Answer").innerHTML="BYE";
+			}
+		}
+	</script>
+</body>
+</Html>

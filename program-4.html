@@ -1,0 +1,55 @@
+<!DOCTYPE Html>
+<html>
+<head>
+	<title>Program 4</title>
+	<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+	<h1>Program 4: Getting 4 Quizzes Average</h1>
+
+	<div>
+		<label for="Quiz1">Enter 1st Quiz</label><br>
+		<input type="number" id="Q1"><br>
+		<label for="Quiz1">Enter 2nd Quiz</label><br>
+		<input type="number" id="Q2"><br>
+		<label for="Quiz1">Enter 3rd Quiz</label><br>
+		<input type="number" id="Q3"><br>
+		<label for="Quiz1">Enter 4th Quiz</label><br>
+		<input type="number" id="Q4"><br>
+	</div>
+	<div>
+		<button onclick="get()">Grade</button>
+	</div>
+	<p id="average">AVERAGE</p>
+	<p id="rate">P / F</p>
+	<button><a href="index.html">Back To Choices.</a></button>
+
+	<script>
+		function get()
+		{
+			var Q1 = parseFloat(document.getElementById("Q1").value);
+			var Q2 = parseFloat(document.getElementById("Q2").value);
+			var Q3 = parseFloat(document.getElementById("Q3").value);
+			var Q4 = parseFloat(document.getElementById("Q4").value);
+
+			var average = (Q1+Q2+Q3+Q4)/4;
+			document.getElementById("average").innerHTML= "Average: " +"<b>"+average+"</b>";
+
+			if (Q1 < 50 || Q1 > 100 || Q2 < 50 || Q2 > 100 || Q3 < 50 || Q3 > 100 || Q4 < 50 || Q4 > 100) {
+        alert("Quiz must be 50 - 100.");
+        return;
+    }
+
+			if (average >= 75)
+			{
+				document.getElementById("rate").innerHTML="<u>Passed";
+			}
+			else
+			{
+				document.getElementById("rate").innerHTML="<u>Failed";
+			}
+			
+		}
+	</script>
+</body>
+</html>
